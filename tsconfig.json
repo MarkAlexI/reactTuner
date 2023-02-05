@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "umd",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "jsx": "react",
+    "noEmit": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/components*"]
+    },
+    "typeRoots": [
+          "./node_modules/@types",
+          "./typings"
+        ],
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src",
+    "typings",
+    "src/**/*.tsx",
+    "**/*.d.tsx",
+    "*.d.tsx"
+  ]
+}
