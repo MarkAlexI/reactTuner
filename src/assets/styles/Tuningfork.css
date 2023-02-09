@@ -1,0 +1,15 @@
+.play-sound {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  background-color: darkcyan;
+  padding: .5rem;
+  border: darkorchid 1px solid;
+  border-radius: 25%;
+  transition: all .5s linear;
+}
+
+.play-sound:hover {
+  color: gold;
+  background-color: teal;
+  border: blue;
+}

@@ -16,7 +16,11 @@ const config = {
         test: /\.(js|ts)x?$/,
         use: 'babel-loader',
         exclude: /node_modules|cdn_modules/
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ]
   },
   resolve: {
