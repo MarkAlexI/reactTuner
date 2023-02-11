@@ -1,3 +1,18 @@
+#app {
+  max-width: 860px;
+}
+
+.string {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.string:nth-child(even) {
+  background-color: lightcyan;
+}
+
 .tab-list {/*ol*/
   width: 100%;
   border-bottom: 1px solid #ccc;

@@ -1,20 +1,21 @@
 import React from 'react';
 import '../assets/styles/Tuningfork.css';
-
-function createSound(frequency: number, duration: number): void {
-  const audioCtx = new AudioContext();
-  const oscillator = audioCtx.createOscillator();
-  oscillator.frequency.value = frequency;
-  oscillator.connect(audioCtx.destination);
-  oscillator.start();
-  oscillator.stop(duration);
-}
+import GuitarString from './GuitarString.tsx';
 
 export const Tuningfork: React.FC = () => (
-  <div>
-    <h2>Apollo440</h2>
-      <button className="play-sound" onClick={ (e) => createSound(440, 1) }>
-        Sound
-      </button>
+  <div className="tuningfork">
+    <h2>Strings:</h2>
+      <GuitarString
+        text="1-st string"
+        span="A-4"
+        frequency={440}
+      >
+      </GuitarString>
+      <GuitarString
+        text="2-nd string"
+        span="C#-2"
+        frequency={1000}
+      >
+      </GuitarString>
   </div>
 );
