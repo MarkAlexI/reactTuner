@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../assets/styles/Tab.css';
 
 const Tab: React.FC = (props) => {
   let className = 'tab-list-item';

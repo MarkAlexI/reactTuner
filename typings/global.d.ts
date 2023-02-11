@@ -1,0 +1,1 @@
+type GuitarStrings = { text: string, span: string, frequency: number }[];

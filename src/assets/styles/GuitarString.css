@@ -1,0 +1,10 @@
+.string {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.string:nth-child(even) {
+  background-color: lightcyan;
+}

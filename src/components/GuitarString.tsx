@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createSound } from '../utils/createSound.tsx';
+import '../assets/styles/GuitarString.css';
 
 const GuitarString: React.FC = (props) => {
   return (
