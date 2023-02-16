@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Tab from './Tab';
 
-const Tabs: React.FC = (props) => {
+const Tabs: React.FC<Tab> = (props) => {
   const [state, setState] = useState({
     activeTab: props.children[0].props.label,
   });

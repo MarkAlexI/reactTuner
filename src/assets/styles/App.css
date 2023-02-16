@@ -1,3 +1,7 @@
 #app {
-  max-width: 860px;
+  max-width: 54rem;
+}
+
+h2, p {
+  padding: 0 .75rem;
 }

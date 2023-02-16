@@ -1,12 +1,13 @@
 import React from 'react';
 import '../assets/styles/Tuningfork.css';
 import GuitarString from './GuitarString.tsx';
-import strings from '../utils/strings.tsx';
+import PropTypes from 'prop-types';
 
-export const Tuningfork: React.FC = () => (
+const Tuningfork: React.FC = (props) => (
   <div className="tuningfork">
     <h2>Strings:</h2>
-    {strings.map((el) => {
+    <p>Standard tune for 6-th strings guitar</p>
+    {props.strings.map((el) => {
       const { text, span, frequency } = el;
   
       return (
@@ -20,3 +21,13 @@ export const Tuningfork: React.FC = () => (
     })}
   </div>
 );
+
+Tuningfork.propTypes = {
+  strings: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    span: PropTypes.string.isRequired,
+    frequency: PropTypes.number.isRequired,
+  })).isRequired,
+};
+
+export default Tuningfork;
