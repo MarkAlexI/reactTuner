@@ -10,7 +10,7 @@ const GuitarString: React.FC<StringParameters> = (props) => {
       <span>{props.span}</span>
       <button className="play-sound" onClick={ () => {
           console.log(props.text);
-          createSound(props.frequency, 1);
+          createSound(props.frequency, 1, props.type);
         }
       }>
         Play
@@ -22,7 +22,8 @@ const GuitarString: React.FC<StringParameters> = (props) => {
 GuitarString.propTypes = {
   text: PropTypes.string.isRequired,
   span: PropTypes.string.isRequired,
-  frequency: PropTypes.number.isRequired
+  frequency: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default GuitarString;

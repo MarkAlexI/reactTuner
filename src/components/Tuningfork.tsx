@@ -16,6 +16,7 @@ const Tuningfork: React.FC = (props) => (
           key={text}
           span={span}
           frequency={frequency}
+          type={props.type}
         />
       );
     })}
@@ -28,6 +29,7 @@ Tuningfork.propTypes = {
     span: PropTypes.string.isRequired,
     frequency: PropTypes.number.isRequired,
   })).isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Tuningfork;
