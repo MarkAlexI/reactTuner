@@ -9,3 +9,8 @@ type StringsStore = {
     [key: string]: StringParameters[];
   }
 };
+
+type SelectOption = {
+  label: string;
+  value: string;
+};
