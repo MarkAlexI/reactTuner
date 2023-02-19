@@ -3,15 +3,24 @@ import PropTypes from 'prop-types';
 import Select from './Select';
 
 const Settings: React.FC = (props) => {
-  const options: SelectOption[] = [
+  const typeOptions: SelectOption[] = [
     { label: 'Sinusoide', value: 'sine' },
     { label: 'Sawtooth', value: 'sawtooth' },
     { label: 'Square', value: 'square' },
     { label: 'Triangle', value: 'triangle' },
   ];
   
-  const handleChange = (event: Event): void => {
+  const tuneOptions: SelectOption[] = [
+    { label: 'Standard', value: 'Standard' },
+    { label: 'Drop D', value: 'Drop D' },
+  ];
+  
+  const handleChangeType = (event: Event): void => {
     props.onChangeWaveType(event.target.value);
+  };
+  
+  const handleChangeTune = (event: Event): void => {
+    props.onChangeTune(event.target.value);
   };
   
   return (
@@ -21,12 +30,22 @@ const Settings: React.FC = (props) => {
     <div>
       <Select
         label="Select type of wave:"
-        options={options}
+        options={typeOptions}
         value={props.type}
-        onChange={handleChange}
+        onChange={handleChangeType}
       />
     
       <p>Type: {props.type}.</p>
+    </div>
+    <div>
+      <Select
+        label="Select type of tune:"
+        options={tuneOptions}
+        value={props.tune}
+        onChange={handleChangeTune}
+      />
+        
+      <p>Type: {props.tune}.</p>
     </div>
   </div>
 )};

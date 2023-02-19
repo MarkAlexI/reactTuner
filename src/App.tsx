@@ -7,14 +7,21 @@ import strings from './utils/strings.tsx';
 
 export const App: React.FC = () => {
   const [waveType, setWaveType] = useState("sine");
+  const [tune, setTune] = useState("Standard");
   
   return (
   <div>
     <h1>Tuner Demo</h1>
     Type: {waveType}
+    <br />
+    Tune: {tune}
     <Tabs>
       <div label="Camerton">
-        <Tuningfork strings={strings.guitar.standard} type={waveType} />
+        <Tuningfork
+          strings={strings.guitar[tune]}
+          type={waveType}
+          tune={tune}
+        />
         Press the <em>button</em>!
       </div>
       <div label="Tuner">
@@ -27,6 +34,8 @@ export const App: React.FC = () => {
         <Settings
           type={waveType}
           onChangeWaveType={(value) => setWaveType(value)}
+          tune={tune}
+          onChangeTune={(value) => setTune(value)}
         />
       </div>
     </Tabs>

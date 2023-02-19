@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Tuningfork: React.FC = (props) => (
   <div className="tuningfork">
     <h2>Strings:</h2>
-    <p>Standard tune for 6-th strings guitar</p>
+    <p>{props.tune} tune for 6-th strings guitar</p>
     {props.strings.map((el) => {
       const { text, span, frequency } = el;
   
@@ -30,6 +30,7 @@ Tuningfork.propTypes = {
     frequency: PropTypes.number.isRequired,
   })).isRequired,
   type: PropTypes.string.isRequired,
+  tune: PropTypes.string.isRequired,
 };
 
 export default Tuningfork;
