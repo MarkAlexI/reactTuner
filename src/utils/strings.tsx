@@ -64,6 +64,30 @@ const strings: StringsStore = {
         frequency: 73.42
       }
     ],
+  },
+  ukulele: {
+    "Standard": [
+      {
+        text: "1-st string",
+        span: "A",
+        frequency: 440
+      },
+      {
+        text: "2-nd string",
+        span: "E",
+        frequency: 329.63
+      },
+      {
+        text: "3-rd string",
+        span: "C",
+        frequency: 261.63
+      },
+      {
+        text: "4-th string",
+        span: "G",
+        frequency: 392
+      }
+    ],
   }
 };
 

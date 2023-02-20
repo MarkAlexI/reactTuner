@@ -14,3 +14,8 @@ type SelectOption = {
   label: string;
   value: string;
 };
+
+type TuneOptions = {
+  guitar: SelectOption[];
+  ukulele: SelectOption[];
+};

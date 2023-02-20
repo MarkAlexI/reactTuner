@@ -10,10 +10,20 @@ const Settings: React.FC = (props) => {
     { label: 'Triangle', value: 'triangle' },
   ];
   
-  const tuneOptions: SelectOption[] = [
-    { label: 'Standard', value: 'Standard' },
-    { label: 'Drop D', value: 'Drop D' },
-  ];
+  const tuneOptions: TuneOptions = {
+    guitar: [
+      { label: 'Standard', value: 'Standard' },
+      { label: 'Drop D', value: 'Drop D' },
+    ],
+    ukulele: [
+      { label: 'Standard', value: 'Standard' },
+    ],
+  };
+  
+  const fiddleOptions: SelectOption[] = [
+    { label: 'Guitar', value: 'guitar' },
+    { label: 'Ukulele', value: 'ukulele' },
+    ];
   
   const handleChangeType = (event: Event): void => {
     props.onChangeWaveType(event.target.value);
@@ -21,6 +31,11 @@ const Settings: React.FC = (props) => {
   
   const handleChangeTune = (event: Event): void => {
     props.onChangeTune(event.target.value);
+  };
+  
+  const handleChangeFiddle = (event: Event): void => {
+    props.onChangeTune('Standard');
+    props.onChangeFiddle(event.target.value);
   };
   
   return (
@@ -40,19 +55,33 @@ const Settings: React.FC = (props) => {
     <div>
       <Select
         label="Select type of tune:"
-        options={tuneOptions}
+        options={tuneOptions[props.fiddle]}
         value={props.tune}
         onChange={handleChangeTune}
       />
         
       <p>Type: {props.tune}.</p>
     </div>
+    <div>
+          <Select
+            label="Select type of instrument:"
+            options={fiddleOptions}
+            value={props.fiddle}
+            onChange={handleChangeFiddle}
+          />
+            
+          <p>Type: {props.fiddle}.</p>
+        </div>
   </div>
 )};
 
 Settings.propTypes = {
   type: PropTypes.string.isRequired,
   onChangeWaveType: PropTypes.func.isRequired,
+  tune: PropTypes.string.isRequired,
+  onChangeTune: PropTypes.func.isRequired,
+  fiddle: PropTypes.string.isRequired,
+  onChangeFiddle: PropTypes.func.isRequired,
 };
 
 export default Settings;
