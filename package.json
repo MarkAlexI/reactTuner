@@ -1,11 +1,11 @@
 {
-  "name": "react-project",
-  "version": "1.7.2",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "reactTuner",
+  "version": "1.7.3",
+  "description": "Just tuner with metronome.",
+  "main": "dist/bundle.js",
+  "keywords": ["react", "tuner"],
+  "author": "MarkAlexI",
+  "license": "MIT",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "install-dep": "npm i",
