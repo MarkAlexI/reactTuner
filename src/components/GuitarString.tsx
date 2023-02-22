@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createSound } from '../utils/createSound.tsx';
+import { createSound } from '../utils/createSound';
 import '../assets/styles/GuitarString.css';
 
 const GuitarString: React.FC<StringParameters> = (props) => {
   return (
     <div className="string">
       <p>{props.text}</p>
-      <span>{props.span}</span>
+      <span>{props.note}</span>
       <button className="play-sound" onClick={ () => {
           console.log(props.text);
           createSound(props.frequency, 1, props.type);
@@ -21,7 +21,7 @@ const GuitarString: React.FC<StringParameters> = (props) => {
 
 GuitarString.propTypes = {
   text: PropTypes.string.isRequired,
-  span: PropTypes.string.isRequired,
+  note: PropTypes.string.isRequired,
   frequency: PropTypes.number.isRequired,
   type: PropTypes.string.isRequired,
 };

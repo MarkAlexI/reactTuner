@@ -3,65 +3,53 @@ const strings: StringsStore = {
     "Standard": [
       {
         text: "1-st string",
-        span: "e4",
-        frequency: 329.63
+        note: "E4"
       },
       {
         text: "2-nd string",
-        span: "B3",
-        frequency: 246.94
+        note: "B3"
       },
       {
         text: "3-rd string",
-        span: "G3",
-        frequency: 196
+        note: "G3"
       },
       {
         text: "4-th string",
-        span: "D3",
-        frequency: 146.83
+        note: "D3"
       },
       {
         text: "5-th string",
-        span: "A2",
-        frequency: 110
+        note: "A2"
       },
       {
         text: "6-th string",
-        span: "E2",
-        frequency: 82.41
+        note: "E2"
       }
     ],
     "Drop D": [
       {
         text: "1-st string",
-        span: "e4",
-        frequency: 329.63
+        note: "E4"
       },
       {
         text: "2-nd string",
-        span: "B3",
-        frequency: 246.94
+        note: "B3"
       },
       {
         text: "3-rd string",
-        span: "G3",
-        frequency: 196
+        note: "G3"
       },
       {
         text: "4-th string",
-        span: "D3",
-        frequency: 146.83
+        note: "D3"
       },
       {
         text: "5-th string",
-        span: "A2",
-        frequency: 110
+        note: "A2"
       },
       {
         text: "6-th string",
-        span: "D2",
-        frequency: 73.42
+        note: "D2"
       }
     ],
   },
@@ -69,45 +57,37 @@ const strings: StringsStore = {
     "Standard": [
       {
         text: "1-st string",
-        span: "A4",
-        frequency: 440
+        note: "A4"
       },
       {
         text: "2-nd string",
-        span: "E4",
-        frequency: 329.63
+        note: "E4"
       },
       {
         text: "3-rd string",
-        span: "C4",
-        frequency: 261.63
+        note: "C4"
       },
       {
         text: "4-th string",
-        span: "G4",
-        frequency: 392
+        note: "G4"
       }
     ],
     "Low G": [
       {
         text: "1-st string",
-        span: "A4",
-        frequency: 440
+        note: "A4"
       },
       {
         text: "2-nd string",
-        span: "E4",
-        frequency: 329.63
+        note: "E4"
       },
       {
         text: "3-rd string",
-        span: "C4",
-        frequency: 261.63
+        note: "C4"
       },
       {
         text: "4-th string",
-        span: "G3",
-        frequency: 196
+        note: "G3"
       }
     ],
   }

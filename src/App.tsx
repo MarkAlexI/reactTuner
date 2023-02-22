@@ -3,10 +3,10 @@ import Tuningfork from './components/Tuningfork';
 import Tabs from './components/Tabs';
 import Settings from './components/Settings';
 import './assets/styles/App.css';
-import strings from './utils/strings.tsx';
+import strings from './utils/strings';
 
 export const App: React.FC = () => {
-  const [waveType, setWaveType] = useState("sine");
+  const [waveType, setWaveType] = useState("sawtooth");
   const [tune, setTune] = useState("Standard");
   const [fiddle, setFiddle] = useState("guitar");
   
