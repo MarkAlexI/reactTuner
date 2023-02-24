@@ -9,7 +9,7 @@ const Tuningfork: React.FC = (props) => (
     <h2>Strings:</h2>
     <p>{props.tune} tune for 6-th strings guitar</p>
     {props.strings.map((el) => {
-      const { text, note, frequency } = el;
+      const { text, note } = el;
   
       return (
         <GuitarString
