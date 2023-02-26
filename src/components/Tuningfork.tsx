@@ -4,17 +4,19 @@ import GuitarString from './GuitarString.tsx';
 import { getFrequency } from '../utils/getFrequency';
 import PropTypes from 'prop-types';
 
-const Tuningfork: React.FC = (props) => (
+const Tuningfork: React.FC = (props) => {
+  const stringIndex: Array<string> = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
+  
+  return (
   <div className="tuningfork">
     <h2>Strings:</h2>
-    <p>{props.tune} tune for 6-th strings guitar</p>
-    {props.strings.map((el) => {
-      const { text, note } = el;
+    <p>{props.tune} tune for {props.strings.length}-th strings guitar</p>
+    {props.strings.map((note, i) => {
   
       return (
         <GuitarString
-          text={text}
-          key={text}
+          text={stringIndex[i] + ' string'}
+          key={note + i}
           note={note}
           frequency={getFrequency(note)}
           type={props.type}
@@ -22,13 +24,10 @@ const Tuningfork: React.FC = (props) => (
       );
     })}
   </div>
-);
+)};
 
 Tuningfork.propTypes = {
-  strings: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    note: PropTypes.string.isRequired,
-  })).isRequired,
+  strings: PropTypes.instanceOf(Array).isRequired,
   type: PropTypes.string.isRequired,
   tune: PropTypes.string.isRequired,
 };

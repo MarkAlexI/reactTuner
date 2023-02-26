@@ -17,6 +17,7 @@ const Settings: React.FC = (props) => {
     ],
     ukulele: [
       { label: 'Standard', value: 'Standard' },
+      { label: 'Low G', value: 'Low G' },
     ],
   };
   
