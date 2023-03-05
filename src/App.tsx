@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Tuningfork from './components/Tuningfork';
 import Tuner from './components/Tuner';
+import Metronome from './components/Metronome';
 import Tabs from './components/Tabs';
 import Settings from './components/Settings';
 import './assets/styles/App.css';
@@ -34,6 +35,9 @@ export const App: React.FC = () => {
       </div>
       <div label="Metronome">
         Play with <em>metronome</em>!
+        <Metronome
+          type={waveType}
+        />
       </div>
       <div label="Settings">
         <Settings
