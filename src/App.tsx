@@ -35,9 +35,7 @@ export const App: React.FC = () => {
       </div>
       <div label="Metronome">
         Play with <em>metronome</em>!
-        <Metronome
-          type={waveType}
-        />
+        <Metronome />
       </div>
       <div label="Settings">
         <Settings
