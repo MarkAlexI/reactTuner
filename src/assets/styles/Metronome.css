@@ -1,0 +1,80 @@
+input[type="range"] {
+  -webkit-appearance: none !important;
+  max-height: 3px;
+  position: relative;
+  top: -3px;
+  background: #DDD;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -1px;
+  background: #222;
+}
+
+.counter {
+  width: 100%;
+  padding-bottom: 10px;
+  background: lighten(#333, 5%);
+  text-align: center;
+}
+
+.counter .dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 25px 10px 10px 10px;
+  background: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.counter .active {
+  background: lighten(#44B8FF, 5%);
+}
+
+.controls {
+  color: darkviolet;
+  padding: 20px;
+  text-align: center;
+}
+
+.controls label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.controls lalel span {
+  background: #FFF;
+  color: #222;
+  padding: 5px;
+}
+
+.controls label span p {
+  display: inline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.controls lalel span p:hover {
+  color: #FA6900;
+}
+
+
+
+input {
+  width: 30px;
+  border: 0px solid;
+  color: #222;
+  text-align: center;
+  padding: 4px;
+}
+
+select {
+  border: 0px;
+  color: #222;
+}
