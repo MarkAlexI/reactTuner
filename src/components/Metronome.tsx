@@ -73,19 +73,29 @@ const Metronome: React.FC = () => {
               className="bpm-plus"
             >+</p>
           </span>
-          </label>
-          <label>
-            Beat:
+        </label>
+        <label>
+          Beat:
+          <span>
+            <p
+              onClick={() => setBeat('' + (+beat - 1))}
+                className="bpm-minus"
+            >-</p>
             <input
               type="text"
               value={beat}
               className="ts-top"
               onInput={(e) => setBeat(e.target.value)}
             />
-          </label>
-        </div>
+            <p
+              onClick={() => setBeat('' +(+beat + 1))}
+              className="bpm-plus"
+            >+</p>
+          </span>
+        </label>
+      </div>
  
-      <div>
+      <div className="flex">
         <button
           className="play-sound"
           onClick={on}
