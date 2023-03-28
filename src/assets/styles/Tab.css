@@ -1,11 +1,11 @@
 .tab-list {/*ol*/
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid lightblue;
   padding-left: 0;
 }
 
 .tab-list-item {/*li*/
-  width: 25%;
+  width: 27%;
   background-color: lightblue;
   display: inline-block;
   list-style: none;
@@ -15,8 +15,8 @@
 }
 
 .tab-list-active {/*li active*/
-  background-color: white;
-  border: solid #ccc;
+  background-color: lightcyan;
+  border: 1px solid darkcyan;
   border-width: 1px 1px 0 1px;
 }
 

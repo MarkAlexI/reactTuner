@@ -1,7 +1,28 @@
 #app {
   max-width: 54rem;
+  font-size: 1.2rem;
 }
 
-h2, p {
+h2,
+p {
   padding: 0 .75rem;
+}
+
+p, select {
+  font-size: 1.2rem;
+}
+
+.wrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.container {
+  padding: 1rem;
+  background-color: lime;
 }
