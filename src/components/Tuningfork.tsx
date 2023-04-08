@@ -5,7 +5,7 @@ import { getFrequency } from '../utils/getFrequency';
 import PropTypes from 'prop-types';
 
 const Tuningfork: React.FC = (props) => {
-  const stringIndex: Array<string> = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
+  const stringIndex: Array<string> = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th'];
   
   return (
   <div className="tuningfork">

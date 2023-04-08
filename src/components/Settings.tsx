@@ -1,8 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from './Select';
+import strings from '../utils/strings';
 
 const Settings: React.FC = (props) => {
+  let tunes = {};
+  
+  Object.entries(strings).forEach((el) => {
+    tunes[el[0]] = Object.keys(el[1]).map((item) => {
+      return { label: item, value: item };
+    });
+  });
+  
   const typeOptions: SelectOption[] = [
     { label: 'Sinusoide', value: 'sine' },
     { label: 'Sawtooth', value: 'sawtooth' },
@@ -10,21 +19,12 @@ const Settings: React.FC = (props) => {
     { label: 'Triangle', value: 'triangle' },
   ];
   
-  const tuneOptions: TuneOptions = {
-    guitar: [
-      { label: 'Standard', value: 'Standard' },
-      { label: 'Drop D', value: 'Drop D' },
-    ],
-    ukulele: [
-      { label: 'Standard', value: 'Standard' },
-      { label: 'Low G', value: 'Low G' },
-    ],
-  };
+  const tuneOptions: TuneOptions = tunes;
   
-  const fiddleOptions: SelectOption[] = [
-    { label: 'Guitar', value: 'guitar' },
-    { label: 'Ukulele', value: 'ukulele' },
-    ];
+  const fiddleOptions: SelectOption[] = Object.keys(tunes)
+    .map((el) => {
+      return { label: el, value: el };
+    });
   
   const handleChangeType = (event: Event): void => {
     props.onChangeWaveType(event.target.value);
@@ -45,7 +45,7 @@ const Settings: React.FC = (props) => {
     
     <div>
       <Select
-        label="Select type of wave:"
+        label="Select type of wave: "
         options={typeOptions}
         value={props.type}
         onChange={handleChangeType}
@@ -55,7 +55,7 @@ const Settings: React.FC = (props) => {
     </div>
     <div>
       <Select
-        label="Select type of tune:"
+        label="Select type of tune: "
         options={tuneOptions[props.fiddle]}
         value={props.tune}
         onChange={handleChangeTune}
@@ -65,7 +65,7 @@ const Settings: React.FC = (props) => {
     </div>
     <div>
           <Select
-            label="Select type of instrument:"
+            label="Select type of instrument: "
             options={fiddleOptions}
             value={props.fiddle}
             onChange={handleChangeFiddle}

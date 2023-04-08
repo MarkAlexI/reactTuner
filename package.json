@@ -1,6 +1,6 @@
 {
   "name": "reactTuner",
-  "version": "1.11.7",
+  "version": "1.12.7",
   "description": "Just tuner with metronome.",
   "main": "dist/bundle.js",
   "keywords": ["react", "tuner"],

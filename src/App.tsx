@@ -10,7 +10,7 @@ import strings from './utils/strings';
 export const App: React.FC = () => {
   const [waveType, setWaveType] = useState("sawtooth");
   const [tune, setTune] = useState("Standard");
-  const [fiddle, setFiddle] = useState("guitar");
+  const [fiddle, setFiddle] = useState("Guitar");
 
   return (
   <div className="wrap">
